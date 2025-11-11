@@ -1,0 +1,76 @@
+# TOMCAT DEPENDENCIES
+
+1) JAVA 
+2) CLDK WENSITE /BIN/SRC/WGET URL
+
+JENKINS PLUIGNS REQUIRED 
+
+1) DEPLOY TO CONTAINER CLDK
+2) FOR BACKUP IN JENKINS WE NEED TO INSTALL THINBACKUP IN SECURITY WE CAN CHAGE
+
+3) ROLE BASED SARGETY FOR AUTHORIZATION CERTAIN PEOLPLE TO BUILD 
+
+4) we need to change file oweners root to jenkins
+
+
+# tomcat setup
+
+1) java setup // yum install java 
+
+2)https://downloads.apache.org/ #// select tomcat version 
+3) ls 
+4) to see two files then unzip files commands 
+
+# sudo yum install unzip -y
+# unzip apache-tomcat-10.1.49.zip # select ur version here
+
+pwd /
+
+chmod +x * .sh  /
+
+./startup.sh
+
+then ur server is running 
+
+
+5) if u need to start any service you need to go to bin folder then we can see file startup.sh we need to execute this file in server
+
+after login with public ip and 8080 
+
+then go to mangers u got this error
+
+#By default the Manager is only accessible from a browser running on the same machine as Tomcat. If you wish to modify this restriction, you'll need to edit the Manager's context.xml file.
+
+
+so we can modify these 
+
+cd /apache-tomcat-10.1.49 / main folder 
+
+
+to find any files use this commands like find or locate 
+
+# first we need to install locate package //sudo yum install mlocate -y
+then update db //sudo updatedb
+
+
+
+# locate context.xml
+
+#  cd /root/apache-tomcat-10.1.49/webapps
+
+# the u can see war file here 
+
+cp /path/to/myapp.war /root/apache-tomcat-10.1.49/webapps/
+
+
+
+# then restart tomcat server 
+
+cd /root/apache-tomcat-10.1.49/bin
+./shutdown.sh
+./startup.sh
+
+
+# Tomcat will automatically extract and deploy your app into:
+
+/root/apache-tomcat-10.1.49/webapps/myapp/
