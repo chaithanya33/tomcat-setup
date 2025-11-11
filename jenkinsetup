@@ -9,5 +9,4 @@ sudo apt install jenkins -y
 sudo systemctl daemon-reload
 sudo systemctl restart jenkins
 #jenkins defaulth path
-cat/var/lib/jenkins/secrets/
- 
+/var/lib/jenkins/secrets/initialAdminPassword
