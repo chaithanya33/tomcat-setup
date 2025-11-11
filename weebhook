@@ -1,0 +1,24 @@
+ # webhook setup 
+
+first open repositry settings 
+select webhooks option in repositry
+
+# add webjooks
+
+
+#JENKINS URL UPTO 8080 EXAMPLE 
+
+(http://40.192.15.96:8080/github-webhook)
+
+
+content type json 
+
+
+jenkins plugins required
+
+github integration plugin
+github
+git plugin
+
+
+
