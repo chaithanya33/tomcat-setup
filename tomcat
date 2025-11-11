@@ -58,6 +58,37 @@ then update db //sudo updatedb
 
 #  cd /root/apache-tomcat-10.1.49/webapps
 
+cd /webapps/manager/META-INF//# context xml file we need edit this
+
+vi context.xml
+
+<valve to lines delete 2dd
+two lines delete 
+# then save and exit 
+# next second file edit ( please examine the file conf/tomcat-users.xml )
+# after that three folder back or bin folder u see conf
+# u need modfify this file
+# cd conf 
+# modify tomcat-users.xml
+# -->
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <user username="tomcat" password="admin@123" roles="manager-gui, manager-script"/> 
+
+  # u can add extra these lines copy and paste from above and add below in the wnd  same names u can copy upto only 3 lines and modify with manager-gui is same and manager script is same and username is same u need to modify paasword  and add roles and manger script 
+  #
+  # conf we need to restart tomcat service and it shoulb be restart in bin folder only 
+  # sh startup.sh
+  # again start // sh startup.sh //bin folder
+
+
+
+
+
+
+
+
+
 # the u can see war file here 
 
 cp /path/to/myapp.war /root/apache-tomcat-10.1.49/webapps/
